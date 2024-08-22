@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{94FA8816-B5FC-4A72-9691-6169388B2632}</ProjectGuid>
+    <RootNamespace>晨风微信机器人</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\ATLMFC\INCLUDE;c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\INCLUDE;c:\项目代码\静态库\luabind;c:\项目代码\boost_1_46_1;c:\项目代码\静态库\detour;c:\项目代码\静态库\zlib;c:\项目代码\静态库\luabind\lua\src;c:\项目代码\静态库\CommonFunLib\lodehead;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <LibraryPath>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\ATLMFC\LIB;c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\LIB;c:\项目代码\boost_1_46_1\stage\lib;c:\项目代码\静态库\CommonFunLib\lodehead;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\ATLMFC\INCLUDE;c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\INCLUDE;c:\项目代码\静态库\luabind;c:\项目代码\boost_1_46_1;c:\项目代码\静态库\detour;c:\项目代码\静态库\zlib;c:\项目代码\静态库\luabind\lua\src;c:\项目代码\静态库\CommonFunLib\lodehead;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <LibraryPath>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\ATLMFC\LIB;c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\LIB;c:\项目代码\boost_1_46_1\stage\lib;c:\项目代码\静态库\CommonFunLib\lodehead;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;</LibraryPath>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>CURL_STATICLIB;WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\项目代码\boost\openssl_e\include;C:\项目代码\静态库\curl-7.54.1\include;C:\项目代码\静态库\curlpp-0.8.1\include;C:\项目代码\静态库\zlib;C:\项目代码\silk-arm-ios-master\src;C:\项目代码\silk-arm-ios-master\interface</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>boostlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <AdditionalDependencies>crypt32.lib;ws2_32.lib;wldap32.lib;libeay32.lib;ssleay32.lib;</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>C:\Program Files (x86)\晨风微信机器人\晨风微信机器人.exe</OutputFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>CURL_STATICLIB;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\项目代码\boost\openssl_e\include;C:\项目代码\openssl_e\out32;C:\项目代码\静态库\curl-7.54.1\include;C:\项目代码\静态库\curlpp-0.8.1\include;C:\项目代码\静态库\zlib;C:\项目代码\silk-arm-ios-master\src;C:\项目代码\silk-arm-ios-master\interface</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>C:\项目代码\release files\晨风微信机器人\晨风微信机器人.exe</OutputFile>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <AdditionalDependencies>crypt32.lib;ws2_32.lib;wldap32.lib;libeay32.lib;ssleay32.lib;</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcd.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="res\xdd.ico" />
+    <None Include="Res\人品计算.txt" />
+    <None Include="Res\优先设定的回复内容.txt" />
+    <None Include="Res\周公解梦全集.txt" />
+    <None Include="Res\天气.txt" />
+    <None Include="Res\如何不注册也能玩成语接龙和修改名片.txt" />
+    <None Include="Res\姓名配对.txt" />
+    <None Include="Res\定时执行重新登录等指令.txt" />
+    <None Include="Res\帮助.txt" />
+    <None Include="Res\快递编码.txt" />
+    <None Include="Res\成语大全.txt" />
+    <None Include="Res\抢答题.txt" />
+    <None Include="Res\抽签.txt" />
+    <None Include="Res\晨风官方微信扫码关注.jpg" />
+    <None Include="res\晨风微信机器人.ico" />
+    <None Include="Res\晨风微信机器人使用说明.txt" />
+    <None Include="Res\晨风机器人变量大全.txt" />
+    <None Include="Res\更多个性配置.txt" />
+    <None Include="Res\更多武器名称.txt" />
+    <None Include="Res\机器人管理员命令大全.txt" />
+    <None Include="Res\极速模式.重命名.txt" />
+    <None Include="Res\窗口布局.txt" />
+    <None Include="Res\群聊时不回复或者没显示回复的处理办法.txt" />
+    <None Include="Res\背景图片.jpg" />
+    <None Include="Res\自动回复设置文件.txt" />
+    <None Include="Res\自定义小游戏.txt" />
+    <None Include="Res\自定义帮助文件.重命名.txt" />
+    <None Include="Res\自定义广告尾巴.txt" />
+    <None Include="Res\表情输入对照表.jpg" />
+    <None Include="Res\表情输入对照表.txt" />
+    <None Include="Res\输入替换.txt" />
+    <None Include="Res\输出替换.txt" />
+    <None Include="Res\随机表情.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdminList.h" />
+    <ClInclude Include="AutoReplyRule.h" />
+    <ClInclude Include="BASE64_API.h" />
+    <ClInclude Include="BCMenu.h" />
+    <ClInclude Include="BtnST.h" />
+    <ClInclude Include="CeXDib.h" />
+    <ClInclude Include="cJSON.h" />
+    <ClInclude Include="ColorInput.h" />
+    <ClInclude Include="ColorURLInput.h" />
+    <ClInclude Include="crypt.h" />
+    <ClInclude Include="Encrypt.h" />
+    <ClInclude Include="formatstruct.h" />
+    <ClInclude Include="IgnoreDlg.h" />
+    <ClInclude Include="MockHtmlDlg.h" />
+    <ClInclude Include="ModifyTitle.h" />
+    <ClInclude Include="MoreAdminList.h" />
+    <ClInclude Include="MsgDlg.h" />
+    <ClInclude Include="OtherConfig.h" />
+    <ClInclude Include="PictureEx.h" />
+    <ClInclude Include="publicshare.h" />
+    <ClInclude Include="PureAcceptRequestDlg.h" />
+    <ClInclude Include="QR2CodeDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SelectUpImg.h" />
+    <ClInclude Include="ShadeButtonST.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="WeChatAPI.h" />
+    <ClInclude Include="_Pack.h" />
+    <ClInclude Include="_Unpack.h" />
+    <ClInclude Include="晨风微信机器人.h" />
+    <ClInclude Include="晨风微信机器人Dlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AdminList.cpp" />
+    <ClCompile Include="AutoReplyRule.cpp" />
+    <ClCompile Include="BASE64_API.cpp" />
+    <ClCompile Include="BCMenu.cpp" />
+    <ClCompile Include="BtnST.cpp" />
+    <ClCompile Include="CeXDib.cpp" />
+    <ClCompile Include="cJSON.cpp" />
+    <ClCompile Include="ColorInput.cpp" />
+    <ClCompile Include="ColorURLInput.cpp" />
+    <ClCompile Include="crypt.cpp" />
+    <ClCompile Include="Decoder.cpp" />
+    <ClCompile Include="Encrypt.cpp" />
+    <ClCompile Include="IgnoreDlg.cpp" />
+    <ClCompile Include="MockHtmlDlg.cpp" />
+    <ClCompile Include="ModifyTitle.cpp" />
+    <ClCompile Include="MoreAdminList.cpp" />
+    <ClCompile Include="MsgDlg.cpp" />
+    <ClCompile Include="OtherConfig.cpp" />
+    <ClCompile Include="PictureEx.cpp" />
+    <ClCompile Include="publichttp.cpp" />
+    <ClCompile Include="PureAcceptRequestDlg.cpp" />
+    <ClCompile Include="QR2CodeDlg.cpp" />
+    <ClCompile Include="SelectUpImg.cpp" />
+    <ClCompile Include="ShadeButtonST.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WeChatAPI.cpp" />
+    <ClCompile Include="ZBase64.cpp" />
+    <ClCompile Include="_Pack.cpp" />
+    <ClCompile Include="_Unpack.cpp" />
+    <ClCompile Include="晨风微信机器人.cpp" />
+    <ClCompile Include="晨风微信机器人Dlg.cpp" />
+    <ClCompile Include="查.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="晨风微信机器人.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="晨风微信机器人.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
